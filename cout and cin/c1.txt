@@ -1,0 +1,29 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	char cNum;
+	int iNum;
+	double dNum;
+	char Buffer[128];
+
+	cin >> cNum;
+	cout << cNum << endl << endl;
+
+	cin >> iNum;
+	cout << iNum << endl << endl;
+
+	cin >> dNum;
+	cout << dNum << endl << endl;
+
+	cin >> Buffer;
+	cout << Buffer << endl << endl;
+
+
+	return 0;
+}

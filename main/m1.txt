@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+template <typename T>
+class CData
+{
+private:
+	T Data;
+public:
+	CData(void) : Data(0) { printf("생성자 호출!\n\n"); }
+	explicit CData(T tData) : Data(tData) { printf("변환 생성자 호출!\n\n"); }
+	virtual ~CData (void) {
+		printf("소멸자 호출!\n\n");
+	}
+
+public:
+	T GetData(void) { return Data;  }
+};
+CData<int> *g_pData = new CData<int>(100);
+
+int main(void)
+{
+	
+	printf("main() 이전에 초기화 가능!!\n\n");
+
+	delete g_pData;
+
+	return 0;
+}

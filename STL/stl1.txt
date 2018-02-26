@@ -1,0 +1,48 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+template <typename T>
+class CData
+{
+private:
+	T Data;
+public:
+	CData(void) : Data(0) {}
+	explicit CData(T tData): Data(tData) {}
+	virtual ~CData (void) {
+	
+	}
+
+public:
+	T GetData(void) { return Data;  }
+};
+
+int main(void)
+{
+	
+	vector<CData<int>> DataList;
+
+	DataList.reserve(2);
+
+	for (int i = 0; i < 10; ++i)
+	{
+		DataList.push_back(CData<int>(1200 + i));
+	}
+
+	vector<CData<int>>::iterator iter = DataList.begin();
+	for (; iter != DataList.end(); ++iter)
+	{
+		printf("Data: %d\n", iter->GetData());
+	}
+
+	DataList.clear();
+
+
+
+
+	return 0;
+}

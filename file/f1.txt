@@ -1,0 +1,40 @@
+#include "stdafx.h"
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+	ofstream WriteFile;
+	WriteFile.open("Today.txt", ios_base::out);
+	WriteFile << "오늘 날짜 : " << endl << 20170308 << endl;
+	WriteFile.close();
+
+
+	int iDate;
+	char Buffer[128];
+	ifstream ReadFile("Today.txt");
+
+	try {
+		if (ReadFile.is_open() == true)
+		{
+			cout << "파일 읽기 성공!" << endl;
+			ReadFile.getline(Buffer, sizeof(char) * 128);
+			ReadFile >> iDate;
+			cout << Buffer << iDate << endl;
+			ReadFile.close();
+		}
+		else
+		{
+			throw false;
+		}
+	}
+	catch (bool)
+	{
+		cout << "파일 읽기 실패!" << endl;
+	}
+
+	return 0;
+}
+

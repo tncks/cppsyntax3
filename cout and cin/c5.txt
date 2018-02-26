@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <io.h>
+#include <fcntl.h>
+
+using namespace std;
+
+int main()
+{
+	_setmode(_fileno(stdout), _O_U16TEXT);
+	_setmode(_fileno(stdin), _O_U16TEXT);
+
+	wcout << L"유니코드 출력!" << endl;
+
+	wchar_t wBuffer[128];
+	wcout << L"문자열 입력 : ";
+	wcin.getline(wBuffer, sizeof(wchar_t) * 128);
+	wcout << L"문자열 출력 : " << wBuffer << endl;
+
+	return 0;
+}
+

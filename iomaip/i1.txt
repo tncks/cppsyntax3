@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	cout << "결과 : " << setw(10) << 12 << endl << endl;
+
+	cout << "결과 : " << setw(10) << setfill('A') << 13 << endl << endl;
+
+	cout << "결과 : " << setw(10) << 12 << endl << endl;
+
+	cout << "결과2 : " << setbase(8) << 10 << endl;
+
+	cout << "결과2 : " <<  10 << endl;
+
+	cout << "결과2 : " << setbase(16) << 10 << endl;
+
+	cout << "결과3 : " << 10.62 << endl;
+	
+	cout << "결과3 : " << setprecision(3) << 10.62 << endl;
+
+	cout << "결과3 : " << 10.9999 << endl;
+
+	cout << "결과3 : " << setprecision(4) << 10.652 << endl;
+
+	return 0;
+}

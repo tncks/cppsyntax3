@@ -1,0 +1,43 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	cout.precision(4);
+	cout << 10.123 << endl;
+	cout << 10.1266 << endl << endl;
+	cout.precision(3);
+	cout << 10.183 << endl;
+	cout.precision(10);
+	cout << 10.183 << endl;
+
+	cout << endl << endl;
+
+	cout.precision(10);
+	cout << "결과 : " << showpoint << 10.183 << endl;
+	cout << "결과 : " << 20.26224 << endl;
+
+	cout << endl << endl;
+
+	cout.precision(15);
+	cout << "결과2 : " << fixed << 10.183 << endl;
+	cout << "결과2 : " << 20.26224 << endl << endl;
+
+	cout << endl << endl;
+	
+	cout.precision(6);
+	cout << "결과3 : " << scientific << 10.183 << endl;
+	cout << "결과3 : " << 20.262242 << endl;
+
+	cout << endl << endl;
+
+
+
+
+	return 0;
+}

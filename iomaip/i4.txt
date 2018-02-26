@@ -1,0 +1,42 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+
+	cout.width(10);
+	cout << "A" << endl;
+	cout << "AB" << endl;
+	cout.width(10);
+	cout << "AB" << endl;
+	cout.width(2);
+	cout << "AB" << endl << endl;
+
+	cout << endl << endl;
+
+	cout.width(10);
+	cout.fill('U');
+	cout << "A" << endl;
+	cout.width(10);
+	cout << "AB" << endl << endl;
+
+	cout << endl << endl;
+
+	cout.width(20);
+	cout << left << "A" << endl;
+	cout << right << "AB" << endl << endl;
+
+	cout << endl << endl;
+	
+	cout.width(20);
+	cout << internal << -602 << endl;
+	cout << internal << -602 << endl;
+
+	cout << endl << endl;
+
+	return 0;
+}

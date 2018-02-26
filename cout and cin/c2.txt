@@ -1,0 +1,36 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	char cNum;
+	int iInputBufferFlushCount = 1;
+
+
+	cout << "cNum 입력 : ";
+	cin >> cNum;
+	while (cin.get() != '\n')
+	{
+		cout << "입력 버퍼에서 문자 " << iInputBufferFlushCount << "개 비움" << endl;
+		iInputBufferFlushCount++;
+	}
+	cout << "결과 : " << cNum << endl << endl;
+
+	cout << "cNum 입력2 : ";
+	cin.get(cNum);
+	cout << "결과2 :" << cNum << endl << endl;
+	cin.get(cNum);
+
+	char *pBuffer = new char[128];
+	cout << "pBuffer 입력 : ";
+	cin.getline(pBuffer, sizeof(char) * 128);
+	cout << "결과 : " << pBuffer << endl << endl;
+	delete pBuffer;
+
+	return 0;
+}
+

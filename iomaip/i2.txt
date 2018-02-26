@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	oct(cout);
+
+	cout << "결과 : " << 10 << endl << endl;
+
+	cout << "결과 : " << oct << 8 << 9 << endl;
+
+	cout << "결과 : " << dec << showpos << 8 << 9 << endl;
+
+	cout << "결과 : " << hex << 11 << endl << endl << endl;
+
+
+
+	cout << "결과2 : " << showbase << 11 << endl;
+
+	cout << "결과2 : " << uppercase << 11 << endl;
+
+
+	cout.unsetf(ios::hex | ios::showpos | ios::uppercase);
+	cout << "결과3 : " << 11 << endl << endl;
+
+	cout.setf(ios::hex | ios::showpos | ios::uppercase);
+	cout << "결과4 : " << 11 << endl << endl;
+	return 0;
+}

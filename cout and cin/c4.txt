@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include <string>
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	int iNum;
+
+
+	cout << "iNum 입력 : ";
+	cin.ignore(5, '+');
+	cin >> iNum;
+	cout << "결과 : " << iNum << endl << endl;
+	
+	cout << "iNum 입력 : ";
+	cin >> iNum;
+	cout << "결과 : " << iNum << endl << endl;
+
+	char cResult = cin.peek();
+	cout << "결과 : " << cResult << endl << endl;
+	
+
+	return 0;
+}
+
